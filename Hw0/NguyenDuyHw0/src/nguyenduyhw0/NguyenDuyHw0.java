@@ -15,7 +15,32 @@ public class NguyenDuyHw0 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Hello world!");
+        
+        boat myboat = new boat();
+        myboat.name = 'd';
+        myboat.speed = 0;
+        
+        myboat.speedup();
+        myboat.speedup();
+        myboat.speedup();
+
+        myboat.slowdown();
+        
+        System.out.println(myboat.speed);
     }
     
+}
+
+class boat{
+    int speed;
+    char name;
+            
+    void speedup(){
+        speed += 10;        
+    }
+    
+    void slowdown(){
+        speed -= 10;
+    }
 }
