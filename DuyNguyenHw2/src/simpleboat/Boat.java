@@ -32,6 +32,6 @@ public class Boat {
     }
     
     void whereIsTheSail(){
-        System.out.println("The sail is " +  ((state) ? "up" : "down"));
+        System.out.println(name + "'s sail is " +  ((state) ? "up" : "down"));
     }          
 }
