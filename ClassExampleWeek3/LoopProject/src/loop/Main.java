@@ -30,15 +30,14 @@ public class Main {
         
         System.out.println("The average of the array is " + average(numbers) );
         
-        Student[] roster = new Student[10];
+        Student[] roster = new Student[args.length];
         for(int i = 0; i < roster.length; i++){
             roster[i] = new Student();
+            roster[i].name = args[i];
         }
-        roster[2].name = "Duy";
-        roster[2].grade = "A";
-        System.out.println(roster[2].name + "'s grade is " + roster[2].grade);              
-        for(int i=0; i < args.length; i++){
-            System.out.println(args[i]);
+       
+        for(int i=0; i < roster.length; i++){
+            System.out.println(roster[i].name);
         }
     }
     // This is method overloading = Two methods of the same name with different signature. 
