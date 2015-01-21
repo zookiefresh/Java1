@@ -11,15 +11,15 @@ package loop;
  */
 public class Main {
     public static void main(String[] args){
-        int i = 10;
-        /*
-        while(i >=  0){
-            System.out.println(i);
-            i--;
-        }
-        */
-        for(i = 0; i <= 10;  i += 2 ){            
-            System.out.println(i);            
-        }
+        int a = 10;
+        int b = 20;
+        
+        int z =  average(a,b);
+        System.out.println("The average of " + a + " and " + b + " is "+ z);
+    }
+    
+    static int average(int x, int y){
+        int avg =  (x + y) / 2;
+        return avg;
     }
 }
