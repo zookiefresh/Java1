@@ -39,6 +39,11 @@ public class Roster {
     } 
     
     static int calculateAverageGrade(Student[] list) {
-        return 0;
+        int sum = 0; 
+        for (int i = 0; i < list.length; i++){
+            sum += list[i].grade;
+        }
+        
+        return sum / list.length;
     }
 }
