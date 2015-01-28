@@ -30,8 +30,13 @@ public class Roster {
   
 
         // print student information from roster
+        /*
         for (int i = 0 ; i < roster.length ; i++) {
             System.out.println(roster[i].name + ", " + roster[i].grade + ", " + roster[i].letterGrade);
+        }
+        */
+        for (Student s : roster){
+            System.out.println(s.name + ", " + s.grade + ", " + s.letterGrade);
         }
 
        //print average grade        
@@ -40,8 +45,15 @@ public class Roster {
     
     static int calculateAverageGrade(Student[] list) {
         int sum = 0; 
+        /*
         for (int i = 0; i < list.length; i++){
             sum += list[i].grade;
+        }
+                */
+        
+        // enhanced for loop to iterate thru the entire loop. equivalent to foreach
+        for (Student s : list){
+            sum += s.grade;
         }
         
         return sum / list.length;
