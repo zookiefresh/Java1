@@ -20,21 +20,25 @@
   -A class method is not within a context of a object; Thus, an class method
     cannot access an instance variable or instance method and vice versa
 
-  
-
 */
 
 /**
  *
  * @author User
  */
+
+
+
 public class Examples {
     public static void main(String[] args){
-        Point upperLeft = new Point();
-        
-        upperLeft.setX((2));
-        upperLeft.setY(5);
+        Point upperLeft = new Point(2,5);        
         upperLeft.print();
-    }
-    
+        
+        Point lowerRight = new Point(5,2);
+        lowerRight.print();
+        
+        Rectangle R = new Rectangle (upperLeft, lowerRight);
+        System.out.println("The area is " +  R.getArea());                 
+    }   
 }
+

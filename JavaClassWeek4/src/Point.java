@@ -11,8 +11,18 @@
 public class Point {    
     private int x;
     private int y;
-    private final int maxValue = 10;
+    //private final int maxValue = 10;
     
+    // Constructor:
+    //   Invoked automatically, no return value
+    //   Always define a constructor, even if it does nothing.
+    //   You can overload constructors: Define two constructors
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;       
+    }
+
+    /*
     public void setX(int xValue){
         if(xValue < maxValue) {
             x = xValue;
@@ -21,10 +31,6 @@ public class Point {
             System.out.println("Invalid x value " + xValue);
             x = 0;
         }
-    }
-    
-    public int getX(){
-        return x;
     }
     public void setY(int yValue){
          if(yValue < maxValue) {
@@ -35,8 +41,13 @@ public class Point {
             y = 0;
         }
     }
-    public int getY(){
+    */
+    
+    public int getX(){
         return x;
+    }
+    public int getY(){
+        return y;
     }
     
     public void print(){
