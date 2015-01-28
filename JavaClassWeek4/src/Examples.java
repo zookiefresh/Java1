@@ -29,5 +29,12 @@
  * @author User
  */
 public class Examples {
+    public static void main(String[] args){
+        Point upperLeft = new Point();
+        
+        upperLeft.setX((2));
+        upperLeft.setY(5);
+        upperLeft.print();
+    }
     
 }
