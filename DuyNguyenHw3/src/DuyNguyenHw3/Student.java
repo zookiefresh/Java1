@@ -26,13 +26,13 @@ public class Student {
         if (s_grade >= A_min){
             letterGrade = 'A';
         }
-        else if (s_grade >= B_min && s_grade < A_min){ 
+        else if (s_grade >= B_min){ 
             letterGrade = 'B';
         }
-        else if (s_grade >= C_min && s_grade < B_min){
+        else if (s_grade >= C_min){
             letterGrade = 'C';
         }
-        else if (s_grade >= D_min && s_grade < C_min){
+        else if (s_grade >= D_min){
             letterGrade = 'D';
         }
         else {
