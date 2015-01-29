@@ -28,7 +28,7 @@ public class Rectangle {
     float getDistance(Point p1, Point p2){
         float x = p2.getX() - p1.getX();
         float y = p2.getY() - p1.getY();
-        return (float) Math.sqrt((x*x + y*y));
+        return (float) Math.sqrt((x * x + y * y));
     }
     
     float getHeight(){
@@ -43,8 +43,7 @@ public class Rectangle {
         return this.getLength() * this.getHeight();
     }
     
-    void displayInfo(){
-        
+    void displayInfo(){        
         System.out.println("Upper Left Point (x,y): " + uL.getX() + "," + uL.getY());
         System.out.println("Upper Right Point (x,y): " + uR.getX() + "," + uR.getY());
         System.out.println("Lower Left Point (x,y): " + lL.getX() + "," + lL.getY());
