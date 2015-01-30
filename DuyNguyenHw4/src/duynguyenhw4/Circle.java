@@ -10,21 +10,14 @@ package duynguyenhw4;
  * @author duy
  */
 public class Circle {
-    Point centerPoint = new Point();
+    private Point centerPoint = new Point();
     private final float PI = 3.14f;
     private float radius;
-    float area;
+    private float area;
     
-    Circle(Point centerOfCircule, float radius){
+    Circle(Point centerPoint, float radius){
         this.radius = radius;
-        this.centerPoint = centerOfCircule;
-        setArea();
-    }
-    Circle(){
-        this.radius = 0;        
-    }
-    
-    void setArea(){
+        this.centerPoint = centerPoint;
         area = PI * radius * radius;
     }
     

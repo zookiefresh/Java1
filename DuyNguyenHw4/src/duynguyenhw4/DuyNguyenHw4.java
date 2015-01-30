@@ -9,6 +9,7 @@ public class DuyNguyenHw4 {
         Point b = new Point(0,5);
         Point c = new Point(5,0);
         Point d = new Point(5,5);
+        
         Circle C = new Circle(a, 2);
         C.displayInfo();
         
