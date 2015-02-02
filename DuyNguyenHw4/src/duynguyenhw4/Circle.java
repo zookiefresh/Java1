@@ -22,6 +22,7 @@ public class Circle {
     }
     
     void displayInfo(){
+        System.out.println("Circle Info: ");
         System.out.println("Center Point (x,y): " + centerPoint.getX() + "," + centerPoint.getY());
         System.out.println("Radius: " + radius);
         System.out.println("Area: " + area);

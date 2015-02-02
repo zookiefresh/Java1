@@ -18,7 +18,7 @@ public class Rectangle {
     private float height;
     private float area;
     
-    Rectangle(Point lowerLeft, Point lowerRight, Point upperLeft, Point upperRight){
+    Rectangle(Point upperLeft, Point lowerLeft, Point upperRight, Point lowerRight){
         uL = upperLeft;
         uR = upperRight;
         lL = lowerLeft;
@@ -34,13 +34,12 @@ public class Rectangle {
         return (float) Math.sqrt((x * x + y * y));
     }    
     
-    void displayInfo(){        
+    void displayInfo(){    
+        System.out.println("Rectangle Info:");
         System.out.println("Upper Left Point (x,y): " + uL.getX() + "," + uL.getY());
         System.out.println("Upper Right Point (x,y): " + uR.getX() + "," + uR.getY());
         System.out.println("Lower Left Point (x,y): " + lL.getX() + "," + lL.getY());
         System.out.println("Lower Left Point (x,y): " + lR.getX() + "," + lR.getY());
-        System.out.println("Length :" + length);
-        System.out.println("Height :" + height);
-        System.out.println("Area: "+ area);
+        System.out.println("Area: "+ area + "\n");
     }
 }
