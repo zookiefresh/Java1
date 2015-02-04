@@ -19,16 +19,16 @@ public class BankAccount {
         balance = open_balance;
     }
     
-    void deposit(){
-        
+    void deposit(float amt){
+        balance = balance + amt;
     }
-    void withdraw(){
-        
+    void withdraw(float amt){
+        balance = balance - amt;
     }
-    void applyInterest(){
-
-    }
+//    void applyInterest(float rate){
+//        balance = balance * (1 + rate);
+//    }
     void checkBalance(){
-        
+        System.out.println(cust.firstname + " " + cust.lastname + ": balance is: " + balance);
     }
 }
