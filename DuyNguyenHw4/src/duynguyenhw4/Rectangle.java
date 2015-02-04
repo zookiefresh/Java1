@@ -36,4 +36,8 @@ public class Rectangle {
         System.out.println("Lower Left Point (x,y): " + lR.getX() + "," + lR.getY());
         System.out.println("Area: "+ area + "\n");
     }
+    
+    double getArea(){
+        return area;
+    }
 }
