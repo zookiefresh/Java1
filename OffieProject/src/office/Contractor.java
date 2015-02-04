@@ -18,7 +18,7 @@ public class Contractor extends Employee{
     }
     
     void print(){
-        System.out.println(name + "'s weekly income is " + weeklyPay());
+        System.out.println(name + "'s weekly income is $" + weeklyPay());
         System.out.println(name + " is contractor for " + contractDuration + " months");
     }   
     

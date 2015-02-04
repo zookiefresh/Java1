@@ -17,7 +17,7 @@ public class Exempt extends Employee{
     }
     
     void print(){
-        System.out.println(name + "'s weekly income is " + weeklyPay());
-        System.out.println(name + " current vacation time is " + vacationTime);
+        System.out.println(name + "'s weekly income is $" + weeklyPay());
+        System.out.println(name + " current vacation time is " + vacationTime + " hours");
     }
 }
