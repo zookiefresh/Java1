@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ucla.geometry.shapes2d;
+package com.ucla.geometry.shapes3d;
 
 /**
  *
  * @author User
  */
-public class Circle {
+public class Sphere {
     int radius;
-    public Circle(int radius){
+    public Sphere(int radius){
         this.radius = radius;
-    }
-    
+    }    
 }
