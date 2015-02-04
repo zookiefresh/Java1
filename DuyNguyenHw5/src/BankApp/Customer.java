@@ -24,7 +24,7 @@ public class Customer {
         
     }
     
-    private boolean socialIsValid(){
-        return true;
-    }
+//    private boolean socialIsValid(){
+//        return true;
+//    }
 }

@@ -9,10 +9,18 @@ package BankApp;
  *
  * @author duynguyen
  */
-public class CheckingAccount extends BankAccount {    
-    float interestRage = 0.02f;
+public class CheckingAccount extends BankAccount {        
+    static float interestMin = 10000.0f;
     
-    CheckingAccount(String firstName, String lastName, String socialSecurityNumber, float openingBalance){
-        super(firstName, lastName, socialSecurityNumber, openingBalance);
+    CheckingAccount(String first, String last, String ssn, float open_bal){
+        super(first, last, ssn, open_bal);
+        this.interestRate = 0.02f;
+    }
+    
+    @Override
+    void applyInterest(){
+        if (this.balance > interestMin) {
+            this.balance = this.balance * (1 + interestRate);
+        }
     }
 }

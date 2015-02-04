@@ -11,24 +11,40 @@ package BankApp;
  */
 public class BankAccount {
     int accountNumber;
+    
     float balance;
+    float interestRate;
+    
     Customer cust = null;
     
     BankAccount(String f_name, String l_name, String ssn, float open_balance){
         cust = new Customer(f_name, l_name, ssn);
         balance = open_balance;
+        accountNumber = 999999999 + (int)(Math.random() * 999999999);
+        System.out.printf("Successfully created account %d for %s %s\n", accountNumber, cust.firstname, cust.lastname);
+        checkBalance();
     }
     
     void deposit(float amt){
         balance = balance + amt;
+        System.out.println("Deposited " + amt);
+        checkBalance();
     }
     void withdraw(float amt){
-        balance = balance - amt;
+        if (amt < balance){
+            balance = balance - amt;
+            System.out.println(cust.firstname + " withdrew " + amt);
+            checkBalance();
+        }
+        else{
+            System.out.println(cust.firstname + " " + cust.lastname + "'s withdrawl rejected. Insufficient funds");
+        }
+            
     }
-//    void applyInterest(float rate){
-//        balance = balance * (1 + rate);
-//    }
+    void applyInterest(){
+        balance = balance * (1 + interestRate);
+    }
     void checkBalance(){
-        System.out.println(cust.firstname + " " + cust.lastname + ": balance is: " + balance);
+        System.out.println(cust.firstname + " " + cust.lastname + "'s account balance is: " + balance + "\n");
     }
 }
