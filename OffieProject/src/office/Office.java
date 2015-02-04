@@ -17,7 +17,6 @@ public class Office {
         alin.hoursWorkedPerWeek = 40;
         joe.hoursWorkedPerWeek = 45;
         alin.print();
-        joe.print();
-                
+        joe.print();                
     }
 }
