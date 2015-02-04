@@ -12,14 +12,14 @@ package office;
 public class Contractor extends Employee{
     int contractDuration;
     
-    Contractor(String name, int hourlyRate, int contractDuration){
+    Contractor(String name, float hourlyRate, int contractDuration){
         super(name, hourlyRate);
         this.contractDuration = contractDuration;
     }
     
     void print(){
         System.out.println(name + "'s weekly income is " + weeklyPay());
-        System.out.println(name + " is contractor for " + contractDuration + "months");
+        System.out.println(name + " is contractor for " + contractDuration + " months");
     }   
     
 }
