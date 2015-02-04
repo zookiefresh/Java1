@@ -14,25 +14,19 @@ public class Rectangle {
     private Point uR = new Point();
     private Point lL = new Point();
     private Point lR = new Point();    
-    private float length;
-    private float height;
-    private float area;
+    private double length;
+    private double height;
+    private double area;
     
-    Rectangle(Point upperLeft, Point lowerLeft, Point upperRight, Point lowerRight){
+    public Rectangle(Point upperLeft, Point lowerLeft, Point upperRight, Point lowerRight){
         uL = upperLeft;
         uR = upperRight;
         lL = lowerLeft;
         lR = lowerRight;
-        length = getDistance(uL, lL);
-        height = getDistance(uL, uR);
+        length = Point.calcDistance(uL, uR);
+        height = Point.calcDistance(uL, lL);
         area = length * height;
     }
-            
-    float getDistance(Point p1, Point p2){
-        float x = p2.getX() - p1.getX();
-        float y = p2.getY() - p1.getY();
-        return (float) Math.sqrt((x * x + y * y));
-    }    
     
     void displayInfo(){    
         System.out.println("Rectangle Info:");

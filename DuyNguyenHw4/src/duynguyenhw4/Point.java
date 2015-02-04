@@ -29,4 +29,13 @@ public class Point {
     public int getY(){
         return y;
     }
+    
+    // When you create a static method, you don't need an object to use the method.
+    // i.e. You can do something like Point.calcDistance( point1, point2) 
+    // without having an object point. 
+    public static double calcDistance(Point p1, Point p2){
+        double part1 = (p2.x- p1.x) * (p2.x- p1.x);
+        double part2 = (p2.y - p1.y) * (p2.y - p1.y);
+        return Math.sqrt(part1 + part2);        
+    }
 }
