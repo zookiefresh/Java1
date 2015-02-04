@@ -20,4 +20,17 @@ public class Exempt extends Employee{
         System.out.println(name + "'s weekly income is $" + weeklyPay());
         System.out.println(name + " current vacation time is " + vacationTime + " hours");
     }
+    
+    // Sub class override inherited method
+    @Override // Annotation - directives to the compile to tell intention.
+    float weeklyPay(){
+        if (hoursWorkedPerWeek > 40){
+            weeklyIncome = (40 * hourlyRate) + (hoursWorkedPerWeek -40) * hourlyRate*1.5f;
+        }
+        else{
+            weeklyIncome = hoursWorkedPerWeek * hourlyRate;
+        }
+        return weeklyIncome;
+    }  
+    
 }

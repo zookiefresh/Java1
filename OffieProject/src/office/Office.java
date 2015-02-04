@@ -14,8 +14,8 @@ public class Office {
         Contractor alin = new Contractor("Alin", 50.0f, 12);
         Exempt joe = new Exempt("Joe", 45.0f, 80);
         
-        alin.hoursWorkedPerWeek = 20;
-        joe.hoursWorkedPerWeek = 40;
+        alin.hoursWorkedPerWeek = 40;
+        joe.hoursWorkedPerWeek = 45;
         alin.print();
         joe.print();
                 
