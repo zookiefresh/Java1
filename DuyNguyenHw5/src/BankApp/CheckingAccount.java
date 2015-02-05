@@ -18,9 +18,10 @@ public class CheckingAccount extends BankAccount {
     }
     
     @Override
-    void applyInterest(){
-        if (this.balance > interestMin) {
-            this.balance = this.balance * (1 + interestRate);
-        }
+    void applyInterest(){        
+        if (this.balance > interestMin){
+            float earnedInterest = (this.balance - interestMin) * this.interestRate;            
+            this.balance += earnedInterest;
+        }        
     }
 }
