@@ -17,14 +17,19 @@ public class Customer {
     Customer(String firstName, String lastName, String socialSecurityNumber){
         this.firstname = firstName;
         this.lastname = lastName;        
-        this.socialSecurityNumber = socialSecurityNumber;        
+        
+        checkSocial(socialSecurityNumber);
+        this.socialSecurityNumber = socialSecurityNumber;   
+        
     }
     
     Customer(){
         
     }
     
-//    private boolean socialIsValid(){
-//        return true;
-//    }
+    private static void checkSocial(String s){
+        if(!s.matches("\\d{3}-\\d{2}-\\d{4}")){
+            System.out.println("'"+ s + "' seems to be a malformed ssn!");
+        }
+    }
 }
