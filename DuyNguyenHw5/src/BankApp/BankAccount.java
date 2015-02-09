@@ -22,7 +22,7 @@ public class BankAccount {
         balance = open_balance;
         accountNumber = 999999999 + (int)(Math.random() * 999999999);
         System.out.printf("Successfully created account %d for %s %s\n", accountNumber, cust.firstname, cust.lastname);
-        checkBalance();
+        displayBalance();
     }
     
     void deposit(float amt){
@@ -44,7 +44,12 @@ public class BankAccount {
     void applyInterest(){
         balance = balance * (1 + interestRate);
     }
+    
     void checkBalance(){
-        System.out.println(cust.firstname + " " + cust.lastname + "'s account balance is: " + balance + "\n");
+        displayBalance();
     }
+    
+    private void displayBalance(){
+        System.out.println(cust.firstname + " " + cust.lastname + ", " + balance + "\n");
+    } 
 }

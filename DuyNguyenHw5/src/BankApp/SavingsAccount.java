@@ -11,7 +11,9 @@ package BankApp;
  */
 public class SavingsAccount extends BankAccount{    
    
-    SavingsAccount(String firstName, String lastName, String socialSecurityNumber, float openingBalance){
+    SavingsAccount(String firstName, String lastName, 
+            String socialSecurityNumber, float openingBalance){
+        
         super(firstName, lastName, socialSecurityNumber, openingBalance);
         this.interestRate = 0.05f;
     }

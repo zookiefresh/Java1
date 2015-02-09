@@ -29,7 +29,8 @@ public class Customer {
     
     private static void checkSocial(String s){
         if(!s.matches("\\d{3}-\\d{2}-\\d{4}")){
-            System.out.println("'"+ s + "' seems to be a malformed ssn!");
+            System.out.println("'"+ s 
+                    + "' seems to be an invalid social security number!");
         }
     }
 }
