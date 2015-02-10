@@ -28,13 +28,13 @@ public class BankAccount {
     void deposit(float amt){
         balance = balance + amt;
         System.out.println("Deposited " + amt);
-        checkBalance();
+        displayBalance();
     }
     void withdraw(float amt){
         if (amt < balance){
             balance = balance - amt;
             System.out.println(cust.firstname + " withdrew " + amt);
-            checkBalance();
+            displayBalance();
         }
         else{
             System.out.println(cust.firstname + " " + cust.lastname + "'s withdrawl rejected. Insufficient funds");

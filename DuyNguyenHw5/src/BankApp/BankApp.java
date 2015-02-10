@@ -27,9 +27,11 @@ public class BankApp {
         
         acct1.applyInterest();
         acct2.applyInterest();
+        acct3.applyInterest();
 
         acct1.checkBalance();
         acct2.checkBalance();      
+        acct3.checkBalance();
 
         acct1.withdraw(30000.00f);        
 
