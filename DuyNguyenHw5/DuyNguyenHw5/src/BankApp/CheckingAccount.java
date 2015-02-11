@@ -10,7 +10,7 @@ package BankApp;
  * @author duynguyen
  */
 public class CheckingAccount extends BankAccount {        
-    static float interestMin = 10000.0f;
+    static final float interestMin = 10000.0f;    
     
     CheckingAccount(String first, String last, String ssn, float open_bal){
         super(first, last, ssn, open_bal);
