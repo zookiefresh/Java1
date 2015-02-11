@@ -25,7 +25,7 @@ public class Dog extends Animal {
     }
     
     static boolean isThisDog(Animal animal){
-        if(animal.getClass() == Dog.class || Poodle.class == animal.getClass()){
+        if(animal instanceof Dog){
             System.out.println(animal.name + " is a dog");
             return true;    
         }
