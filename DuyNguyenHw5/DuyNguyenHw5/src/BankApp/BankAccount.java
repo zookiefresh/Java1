@@ -10,17 +10,17 @@ package BankApp;
  * @author duynguyen
  */
 public class BankAccount {
-    int accountNumber;
+    // Should be long because it is 10 digits
+    private long accountNumber;
+    private Customer cust = null;
     
     float balance;
     float interestRate;
     
-    Customer cust = null;
-    
     BankAccount(String f_name, String l_name, String ssn, float open_balance){
         cust = new Customer(f_name, l_name, ssn);
         balance = open_balance;
-        accountNumber = 999999999 + (int)(Math.random() * 999999999);
+        accountNumber = 999999999 + (long)(Math.random() * 999999999);
         System.out.printf("Successfully created account %d for %s\n", accountNumber, cust.getName());
         displayBalance();
     }
@@ -31,7 +31,7 @@ public class BankAccount {
         displayBalance();
     }
     void withdraw(float amt){
-        if (amt < balance){
+        if (amt <= balance){
             balance = balance - amt;
             System.out.println(cust.getName() + " withdrew " + amt);
             displayBalance();
