@@ -28,12 +28,18 @@ public class Dog extends Animal {
         // instanceof Dog or all subclasses of Dog
         if(animal instanceof Dog){
             System.out.println(animal.name + " is a dog");
+            // You can call the method now that you know its a dog
+            ((Dog)animal).playBall(); 
             return true;    
         }
         else{
             System.out.println("Whatever");
             return false;
         }
+    }
+    
+    void playBall(){        
+        // something
     }
     
 }
