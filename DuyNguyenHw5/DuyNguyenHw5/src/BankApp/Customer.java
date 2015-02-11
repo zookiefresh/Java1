@@ -10,9 +10,10 @@ package BankApp;
  * @author duynguyen
  */
 public class Customer {
-    public String firstname;
-    public String lastname;
-    public String socialSecurityNumber;
+    // First choice should always be private. Esclate to grant access as needed
+    private String firstname;
+    private String lastname;
+    private String socialSecurityNumber;
     
     Customer(String firstName, String lastName, String socialSecurityNumber){
         this.firstname = firstName;
@@ -32,5 +33,9 @@ public class Customer {
             System.out.println("'"+ s 
                     + "' seems to be an invalid social security number!");
         }
+    }
+    
+    String getName(){
+        return firstname + " " + lastname;
     }
 }

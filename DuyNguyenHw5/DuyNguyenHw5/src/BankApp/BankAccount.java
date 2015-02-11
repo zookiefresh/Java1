@@ -21,7 +21,7 @@ public class BankAccount {
         cust = new Customer(f_name, l_name, ssn);
         balance = open_balance;
         accountNumber = 999999999 + (int)(Math.random() * 999999999);
-        System.out.printf("Successfully created account %d for %s %s\n", accountNumber, cust.firstname, cust.lastname);
+        System.out.printf("Successfully created account %d for %s\n", accountNumber, cust.getName());
         displayBalance();
     }
     
@@ -33,11 +33,11 @@ public class BankAccount {
     void withdraw(float amt){
         if (amt < balance){
             balance = balance - amt;
-            System.out.println(cust.firstname + " withdrew " + amt);
+            System.out.println(cust.getName() + " withdrew " + amt);
             displayBalance();
         }
         else{
-            System.out.println(cust.firstname + " " + cust.lastname + "'s withdrawl rejected. Insufficient funds");
+            System.out.println(cust.getName() + "'s withdrawl rejected. Insufficient funds");
         }
             
     }
@@ -50,6 +50,6 @@ public class BankAccount {
     }
     
     private void displayBalance(){
-        System.out.println(cust.firstname + " " + cust.lastname + ", " + balance + "\n");
+        System.out.println(cust.getName() + ", " + balance + "\n");
     } 
 }
