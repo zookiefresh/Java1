@@ -21,5 +21,19 @@ public class PetHome {
             pets[i].sound();
             pets[i].eat();
         }
+        
+        Dog aDog = new Dog("blue");
+        Animal aAnimal = aDog;
+        // Poodle aPoodle = (Poodle) aDog; // illegal assignment
+        
+        Poodle aPoodle = new Poodle("Cho");
+        aAnimal = aPoodle;
+        // aAnimal.attitude(); // cannot do this
+        ((Poodle) aAnimal).attitude();
+        
+        Dog.isThisDog(pets[1]);
+        Dog.isThisDog(pets[0]);
+        Dog.isThisDog(aDog);
+        Dog.isThisDog(aPoodle);
     }
 }

@@ -9,17 +9,23 @@ package pets;
  *
  * @author User
  */
-public class Animal {
-    private String name;
+public abstract class Animal {
+    String name;
     
     Animal(String name){
         this.name = name;
-    }    
-    void sound(){
-        
-    }    
-    void eat(){
-        
     }
     
+    void breath(){
+        System.out.println("breathing");
+    }
+    
+    // Force sub class to implement these methods
+    abstract void sound();          
+    abstract void eat();    
 }
+/* Casting
+
+Only a super class variable can reference a sub class object.
+
+*/

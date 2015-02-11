@@ -14,7 +14,7 @@ public class Poodle extends Dog{
         super(name);
     }
     
-    void atitude(){
+    void attitude(){
         System.out.println("biotch");
     }
 }
